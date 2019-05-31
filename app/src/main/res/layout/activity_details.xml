@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <ImageView
+        android:id="@+id/image_details"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_details_album_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Album Name"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/image_details" />
+
+    <TextView
+        android:id="@+id/text_details_artist_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="By"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_album_name" />
+
+    <TextView
+        android:id="@+id/text_details_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artist Name"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_artist_label" />
+
+    <TextView
+        android:id="@+id/text_details_genre_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Genre:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_artist" />
+
+    <TextView
+        android:id="@+id/text_details_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Genre"
+        app:layout_constraintStart_toEndOf="@+id/text_details_genre_label"
+        app:layout_constraintTop_toTopOf="@+id/text_details_genre_label" />
+
+    <TextView
+        android:id="@+id/text_details_release_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Release Date:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_genre_label" />
+
+    <TextView
+        android:id="@+id/text_details_release"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Release"
+        app:layout_constraintStart_toEndOf="@+id/text_details_release_label"
+        app:layout_constraintTop_toTopOf="@+id/text_details_release_label" />
+
+    <TextView
+        android:id="@+id/text_details_copyright_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Copyright:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_details_release_label" />
+
+    <TextView
+        android:id="@+id/text_details_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="Copyright"
+        app:layout_constraintStart_toEndOf="@+id/text_details_copyright_label"
+        app:layout_constraintTop_toTopOf="@+id/text_details_copyright_label" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Album Page"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
