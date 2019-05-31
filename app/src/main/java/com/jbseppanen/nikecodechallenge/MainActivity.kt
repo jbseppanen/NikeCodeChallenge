@@ -10,6 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        DataDao.getAlbums(object: DataDao.DataCallback {
+            override fun callback(albums: ArrayList<Album>) {
+            }
+        })
     }
 }
