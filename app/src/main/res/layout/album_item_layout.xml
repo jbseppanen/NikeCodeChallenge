@@ -19,9 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:textStyle="bold"
         android:text="Album Name"
         android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/image_album_art"
         app:layout_constraintTop_toTopOf="@+id/image_album_art" />
 
