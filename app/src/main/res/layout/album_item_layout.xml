@@ -2,7 +2,8 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/image_album_art"
@@ -18,9 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
+        android:textStyle="bold"
         android:text="Album Name"
-        android:textSize="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/image_album_art"
         app:layout_constraintTop_toTopOf="@+id/image_album_art" />
 
@@ -30,9 +31,8 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:text="Artist Name"
-        android:textSize="16dp"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/image_album_art"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_album_art" />
 
 </android.support.constraint.ConstraintLayout>
