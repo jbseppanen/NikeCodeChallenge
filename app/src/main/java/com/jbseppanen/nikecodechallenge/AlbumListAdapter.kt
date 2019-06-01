@@ -1,7 +1,9 @@
 package com.jbseppanen.nikecodechallenge
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.drawable.Drawable
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -60,6 +62,11 @@ class AlbumListAdapter(val activity: Activity) : RecyclerView.Adapter<RecyclerVi
 
         albumHolder.albumNameView.text = element.name
         albumHolder.artistNameView.text = element.artistName
+        albumHolder.albumImage.setOnClickListener {
+            val albumIntent = Intent(activity, DetailsActivity::class.java)
+            albumIntent.putExtra(DetailsActivity.ALBUM_DETAILS_KEY, element)
+            activity.startActivity(albumIntent)
+        }
 
         Glide
             .with(activity)

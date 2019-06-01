@@ -1,5 +1,7 @@
 package com.jbseppanen.nikecodechallenge
 
+import java.io.Serializable
+
 data class Album(
     val artistId: String,
     val artistName: String,
@@ -13,10 +15,10 @@ data class Album(
     val name: String,
     val releaseDate: String,
     val url: String
-)
+) : Serializable
 
 data class Genre(
     val genreId: String,
     val name: String,
     val url: String
-)
+) : Serializable
