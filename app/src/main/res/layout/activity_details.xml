@@ -98,12 +98,14 @@
 
     <TextView
         android:id="@+id/text_details_copyright"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:text="Copyright"
+        android:layout_marginEnd="16dp"
         app:layout_constraintStart_toEndOf="@+id/text_details_copyright_label"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text_details_copyright_label" />
 
     <Button

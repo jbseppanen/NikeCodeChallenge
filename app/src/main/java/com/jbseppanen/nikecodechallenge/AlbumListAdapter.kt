@@ -23,6 +23,7 @@ class AlbumListAdapter(val activity: Activity) : RecyclerView.Adapter<RecyclerVi
         val albumImage: ImageView = view.findViewById(R.id.image_album_art)
         val albumNameView: TextView = view.findViewById(R.id.text_album_name)
         val artistNameView: TextView = view.findViewById(R.id.text_artist_name)
+        val item: View = view.findViewById(R.id.recycler_view_item)
     }
 
     val data = mutableListOf<Album>()
@@ -59,10 +60,12 @@ class AlbumListAdapter(val activity: Activity) : RecyclerView.Adapter<RecyclerVi
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, index: Int) {
         val element = data[index]
         val albumHolder = viewHolder as AlbumItemViewHolder
-
+        albumHolder.item.setPadding(8,8,8,8)
+        albumHolder.albumNameView.setPadding(8,8,8,8)
+        albumHolder.artistNameView.setPadding(8,8,8,8)
         albumHolder.albumNameView.text = element.name
         albumHolder.artistNameView.text = element.artistName
-        albumHolder.albumImage.setOnClickListener {
+        albumHolder.item.setOnClickListener {
             val albumIntent = Intent(activity, DetailsActivity::class.java)
             albumIntent.putExtra(DetailsActivity.ALBUM_DETAILS_KEY, element)
             activity.startActivity(albumIntent)

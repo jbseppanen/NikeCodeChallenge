@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recycler_view_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="8dp">
@@ -16,23 +17,40 @@
 
     <TextView
         android:id="@+id/text_album_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="Album Name"
-        android:textSize="20dp"
+        android:maxLines="2"
+        android:text="Some Really Long Album Name To Wrap"
+        android:textAlignment="center"
+        android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_album_art"
         app:layout_constraintTop_toTopOf="@+id/image_album_art" />
+
+    <TextView
+        android:id="@+id/text_artist_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="By"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_album_art"
+        app:layout_constraintTop_toBottomOf="@+id/text_album_name" />
 
     <TextView
         android:id="@+id/text_artist_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="Artist Name"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/image_album_art"
-        app:layout_constraintStart_toEndOf="@+id/image_album_art" />
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Some Really Long Artist Name to show wrapping"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_album_art"
+        app:layout_constraintTop_toBottomOf="@+id/text_artist_label" />
 
 </android.support.constraint.ConstraintLayout>
