@@ -10,6 +10,9 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import kotlinx.android.synthetic.main.activity_details.*
+import android.content.Intent
+import android.net.Uri
+
 
 class DetailsActivity : AppCompatActivity() {
 
@@ -31,6 +34,8 @@ class DetailsActivity : AppCompatActivity() {
         }
         genres.removeSuffix(",")
         text_details_genre.text = genres
+        text_details_release.text = album.releaseDate
+        text_details_copyright.text = album.copyright
 
         Glide
             .with(this)
@@ -57,5 +62,11 @@ class DetailsActivity : AppCompatActivity() {
                 }
             })
             .into(image_details)
+
+        button_details.setOnClickListener {
+            val uri = Uri.parse(album.url)
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
     }
 }

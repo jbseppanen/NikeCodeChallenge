@@ -107,6 +107,7 @@
         app:layout_constraintTop_toTopOf="@+id/text_details_copyright_label" />
 
     <Button
+        android:id="@+id/button_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Open Album Page"
