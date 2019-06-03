@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NikeCodeChallenge</string>
+    <string name="networkFailure">Network timeout or failure</string>
 </resources>

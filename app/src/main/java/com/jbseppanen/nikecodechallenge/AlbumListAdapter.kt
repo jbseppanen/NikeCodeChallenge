@@ -34,11 +34,19 @@ class AlbumListAdapter(val activity: Activity) : RecyclerView.Adapter<RecyclerVi
 
     private fun getItems() {
         DataDao.getAlbums(object : DataDao.DataCallback {
-            override fun callback(albums: ArrayList<Album>) {
-                data.addAll(albums)
-                activity.runOnUiThread {
-                    activity.progress.visibility = View.INVISIBLE
-                    notifyDataSetChanged()
+            override fun callback(success: Boolean, albums: ArrayList<Album>) {
+                if (success) {
+                    data.addAll(albums)
+                    activity.runOnUiThread {
+                        activity.progress.visibility = View.INVISIBLE
+                        notifyDataSetChanged()
+                    }
+                } else {
+                    activity.runOnUiThread {
+                        activity.progress.visibility = View.INVISIBLE
+                        activity.text_error.visibility = View.VISIBLE
+                        activity.text_error.text = activity.getString(R.string.networkFailure)
+                    }
                 }
             }
         })
