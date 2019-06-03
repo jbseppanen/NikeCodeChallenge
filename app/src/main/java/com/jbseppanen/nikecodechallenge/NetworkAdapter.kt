@@ -8,6 +8,7 @@ import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
 
+
 object NetworkAdapter {
     const val GET = "GET"
     const val POST = "POST"
@@ -77,7 +78,7 @@ object NetworkAdapter {
 
                 }
             }
-            if (!success && result == "timeout") {
+            if (!success && result == "timeout") {  //Load default data if it times out.
                 result = default_data
                 success = true
             }
